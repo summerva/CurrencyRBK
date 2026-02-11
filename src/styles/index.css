@@ -146,3 +146,38 @@ input[type="number"] {
     transition-duration: 0.2s;
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 40px 16px;
+  }
+
+  .converter {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .converter__box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .converter__input {
+    min-height: 160px;
+    padding: 24px 20px;
+  }
+
+  .converter__input-field {
+    font-size: 36px;
+  }
+
+  .converter_switch {
+    height: 50px;
+    top: 0;
+  }
+
+  .button_switch {
+    font-size: 32px;
+  }
+}
