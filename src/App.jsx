@@ -8,17 +8,16 @@ const App = () => {
   const [activeCurrencyFrom, setActiveCurrencyFrom] = useState("RUB");
   const [activeCurrencyTo, setActiveCurrencyTo] = useState("USD");
 
-const getRate = (from, to) => {
-  // Реальные курсы на февраль 2026
-  const rates = { 
-    RUB: 1,
-    USD: 95.20, 
-    EUR: 102.80,
-    GBP: 120.50
+  const getRate = (from, to) => {
+    // Актуальный курс ЦБ РФ на февраль 2026
+    const rates = {
+      RUB: 1,
+      USD: 77.4648,
+      EUR: 92.475,
+      GBP: 105.9254,
+    };
+    return (rates[from] / rates[to]).toFixed(4);
   };
-  return (rates[to] / rates[from]).toFixed(4);
-};
-
 
   const handleSwap = () => {
     setInputFrom(inputTo);
